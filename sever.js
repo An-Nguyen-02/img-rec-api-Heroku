@@ -38,5 +38,5 @@ app.put('/image', (req, res)=>{image.handleImage(req, res, db)})
 app.post('/imageurl', (req, res)=>{image.handleAPIcall(req,res)})
 
 
-app.listen(3001);
+app.listen(process.env.PORT||3001);
 
