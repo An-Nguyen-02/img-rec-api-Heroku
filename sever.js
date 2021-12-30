@@ -8,11 +8,8 @@ const image = require('./controllers/image.js')
 const db = knex({
   client: 'pg',
   connection: {
-    host : 'postgresql-animate-72654',
-    port : 5432,
-    user : 'postgres',
-    password : 'test',
-    database : 'smart-brain-db'
+    host : process.env.DATABASE_URL,
+    ssl: true
   }
 });
 
